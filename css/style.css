@@ -121,8 +121,9 @@ div.landing {
     div.landing div.tit h1.span {
       outline: none; }
   div.landing span.stocks {
-    display: block;
-    padding-top: 82px; }
+    display: block; }
+    div.landing span.stocks div.stock:nth-of-type(1) {
+      padding-top: 82px; }
     div.landing span.stocks div.stock {
       width: 90%;
       margin: 0 auto;
