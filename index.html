@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>World Aggregate News Image Creator</title>
+    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,500,400,700' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/html2canvas.js" type="text/javascript"></script>
+    <script src="../js/canvas2image.js" type="text/javascript"></script>
+    <script src="../js/base64.js" type="text/javascript"></script>
+    <script src="../js/saver.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
+    <script type="text/javascript">
+      $(function() {
+        $("#arr").on( "click", function() {
+          if ($( this ).hasClass( "fa-arrow-circle-up" )) {
+            $( this ).removeClass( "fa-arrow-circle-up" ).addClass( "fa-arrow-circle-down" );
+            $( this ).next().children( "span.percentage" ).css( 'background', '#c0392b' );
+          } else {
+            $( this ).removeClass( "fa-arrow-circle-down" ).addClass( "fa-arrow-circle-up" );
+            $( this ).next().children( "span.percentage" ).css( 'background', '#2bc04b' );
+          }
+        });
+
+        $("#arr2").on( "click", function() {
+          if ($( this ).hasClass( "fa-arrow-circle-up" )) {
+            $( this ).removeClass( "fa-arrow-circle-up" ).addClass( "fa-arrow-circle-down" );
+            $( this ).next().children( "span.percentage" ).css( 'background', '#c0392b' );
+          } else {
+            $( this ).removeClass( "fa-arrow-circle-down" ).addClass( "fa-arrow-circle-up" );
+            $( this ).next().children( "span.percentage" ).css( 'background', '#2bc04b' );
+          }
+        });
+
+        $("#arr3").on( "click", function() {
+          if ($( this ).hasClass( "fa-arrow-circle-up" )) {
+            $( this ).removeClass( "fa-arrow-circle-up" ).addClass( "fa-arrow-circle-down" );
+            $( this ).next().children( "span.percentage" ).css( 'background', '#c0392b' );
+          } else {
+            $( this ).removeClass( "fa-arrow-circle-down" ).addClass( "fa-arrow-circle-up" );
+            $( this ).next().children( "span.percentage" ).css( 'background', '#2bc04b' );
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>World Aggregate News</h1>
+      <span>Image Creator</span>
+    </div>
+
+    <div class="content quote" id="quote">
+      <div class="top">
+        <div class="landing" id="q">
+          <span class="quote">
+            <span class="ll">&ldquo;</span>
+            <h1 class="quote" contentEditable="true">News is packaged information about current events happening somewhere else...</h1>
+            <h2 class="cite" contentEditable="true">Wikipedia article on 'News'</h2>
+          </span>
+          <div class="tit">
+            <h1 class="le" contentEditable="true">Topic</h1>
+            <h1 class="credit">Source: <span contentEditable="true">Insert source</span></h1>
+          </div>
+          <div class="cred">
+            <h1 class="nom">World Aggregate News</h1>
+            <h1 class="at">@WAGGNews</h1>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="info">
+          <p>This works best with the latest versions of Google Chrome or Safari, but other modern browsers should be fine.</p>
+          <p>Remember to adhere to the style guide and double-check for spelling and grammar mistakes or Braeden will get mad.</p>
+        </div>
+        <div class="configs">
+          <p><em>No configurations, just click on the text and type.</em></p>
+          <p><strong><em>Remember to change the source and topic at the top!</em></strong></p>
+          <input type="button" id="saveQuote" value="Save as an image"/>
+          <div id="#qout"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content stocks" id="stocks">
+      <div class="top">
+        <div class="landing" id="s">
+          <span class="stocks">
+
+            <div class="stock">
+              <span class="ticker" contentEditable="true">DOW JONES</span>
+              <i class="fa fa-arrow-circle-up" id="arr"></i>
+              <span class="three">
+                <span class="percentage" contentEditable="true">3.95</span>
+                <span class="price" contentEditable="true">16,285.51</span>
+              </span>
+            </div>
+
+            <div class="stock">
+              <span class="ticker" contentEditable="true">S&P 500</span>
+              <i class="fa fa-arrow-circle-up" id="arr2"></i>
+              <span class="three">
+                <span class="percentage" contentEditable="true">3.90</span>
+                <span class="price" contentEditable="true">1,940.51</span>
+              </span>
+            </div>
+
+
+            <div class="stock">
+              <span class="ticker" contentEditable="true">NASDAQ</span>
+              <i class="fa fa-arrow-circle-up" id="arr3"></i>
+              <span class="three">
+                <span class="percentage" contentEditable="true">4.24</span>
+                <span class="price" contentEditable="true">4,697.54</span>
+              </span>
+            </div>
+
+          </span>
+
+          <div class="tit">
+            <h1 class="le" contentEditable="true">Closing stock market prices</h1>
+            <h1 class="credit">Source: <span contentEditable="true">Yahoo! Finance</span></h1>
+          </div>
+
+          <div class="cred">
+            <h1 class="nom">World Aggregate News</h1>
+            <h1 class="at">@WAGGNews</h1>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="info">
+          <p>This works best with the latest versions of Google Chrome or Safari, but other modern browsers should be fine.</p>
+          <p>Make sure all stock prices are correct and that they're sourced correctly, or Braeden will get mad.</p>
+        </div>
+        <div class="configs">
+          <p><em>Click on the arrow to toggle its direction.</em></p>
+          <p><strong><em>Remember to change the source!</em></strong></p>
+          <input type="button" id="saveStocks" value="Save as an image"/>
+          <div id="#sout"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

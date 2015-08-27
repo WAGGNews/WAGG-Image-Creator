@@ -1,0 +1,170 @@
+@charset "UTF-8";
+body {
+  width: 920px;
+  margin: 0 auto; }
+
+div.header {
+  font-family: "Fira Sans", "Helvetica Neue", Helvetica, "FreeSans", Arial, sans-serif;
+  width: 100%;
+  height: 28px;
+  margin: 32px 0; }
+  div.header h1, div.header span {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 700; }
+  div.header h1 {
+    float: left;
+    color: #c0392b; }
+  div.header span {
+    float: right; }
+
+div.content {
+  display: block;
+  height: 630px;
+  margin-bottom: 75px;
+  border-bottom: 5px solid #c0392b;
+  padding-bottom: 75px; }
+
+div.content:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0; }
+
+div.landing {
+  font-family: "Fira Sans", "Helvetica Neue", Helvetica, "FreeSans", Arial, sans-serif;
+  width: 920px;
+  height: 460px;
+  background: white;
+  position: relative;
+  /* Quote */
+  /* WAGG things */
+  /* Stocks */ }
+  div.landing span.quote {
+    display: block; }
+  div.landing h1.quote {
+    display: inline-block;
+    margin: 0;
+    margin-left: 118px;
+    margin-top: 64px;
+    padding: 30px 40px;
+    font-weight: 300;
+    width: 700px;
+    font-size: 48px;
+    border-left: 10px solid #c0392b;
+    max-height: 174px;
+    overflow: hidden;
+    outline: none; }
+  div.landing span.ll {
+    font-family: "Georgia", "Times New Roman", serif;
+    display: inline;
+    position: absolute;
+    top: 80px;
+    left: 35px;
+    height: 10px;
+    font-size: 128px; }
+  div.landing h2.cite {
+    font-weight: 400;
+    position: relative;
+    left: 117px;
+    margin-top: 24px;
+    width: 740px;
+    outline: none; }
+  div.landing h2.cite:before {
+    position: relative;
+    content: "–";
+    margin-right: 18px; }
+  div.landing div.cred {
+    background: #c0392b;
+    width: 100%;
+    height: 56px;
+    position: absolute;
+    color: white;
+    bottom: 0; }
+    div.landing div.cred h1 {
+      font-weight: 300;
+      margin: 0;
+      font-size: 24px;
+      margin-top: 14px; }
+    div.landing div.cred h1.nom {
+      float: left;
+      position: relative;
+      left: 36px;
+      font-weight: 700; }
+    div.landing div.cred h1.at {
+      float: right;
+      position: relative;
+      right: 36px;
+      letter-spacing: 1px; }
+    div.landing div.cred h1.span {
+      outline: none; }
+  div.landing div.tit {
+    background: #c0392b;
+    width: 100%;
+    height: 28px;
+    position: absolute;
+    color: white;
+    top: 0; }
+    div.landing div.tit h1.le {
+      font-weight: 500;
+      margin: 0;
+      font-size: 12px;
+      margin-top: 7px;
+      margin-left: 36px;
+      float: left; }
+    div.landing div.tit h1.credit {
+      font-weight: 300;
+      margin: 0;
+      font-size: 12px;
+      margin-top: 7px;
+      margin-right: 36px;
+      float: right; }
+    div.landing div.tit h1.span {
+      outline: none; }
+  div.landing span.stocks {
+    display: block;
+    padding-top: 82px; }
+    div.landing span.stocks div.stock {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 42px;
+      padding: 12px; }
+      div.landing span.stocks div.stock span.ticker {
+        display: inline-block;
+        width: 250px;
+        text-align: right;
+        outline: 0; }
+      div.landing span.stocks div.stock i.fa {
+        display: inline-block;
+        padding: 0 20px; }
+      div.landing span.stocks div.stock span.three .percentage {
+        display: inline-block;
+        background: #2bc04b;
+        color: white;
+        width: 188px;
+        text-align: center; }
+      div.landing span.stocks div.stock span.three .percentage:after {
+        content: "%"; }
+      div.landing span.stocks div.stock span.three > span {
+        padding: 10px;
+        outline: 0; }
+
+div.bottom {
+  margin: 25px;
+  font-family: "Helvetica Neue", Helvetica, "FreeSans", Arial, sans-serif;
+  font-size: 14px; }
+  div.bottom div.info {
+    width: 400px;
+    background: #ffc832;
+    padding: 5px 5px;
+    border-radius: 5px;
+    float: left; }
+    div.bottom div.info p {
+      margin: 10px;
+      line-height: 1.5; }
+  div.bottom div.configs {
+    width: 400px;
+    margin: 10px;
+    float: right; }
+    div.bottom div.configs p {
+      margin: 0;
+      margin-bottom: 15px; }

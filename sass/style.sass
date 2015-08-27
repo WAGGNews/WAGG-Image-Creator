@@ -1,0 +1,170 @@
+body
+  width: 920px
+  margin: 0 auto
+
+div.header
+  font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, 'FreeSans', Arial, sans-serif
+  width: 100%
+  height: 28px
+  margin: 32px 0
+  h1, span
+    font-size: 24px
+    margin: 0
+    padding: 0
+    font-weight: 700
+  h1
+    float: left
+    color: #c0392b
+  span
+    float: right
+
+div.content
+  display: block
+  height: 630px
+  margin-bottom: 75px
+  border-bottom: 5px solid #c0392b
+  padding-bottom: 75px
+
+div.content:last-of-type
+  border-bottom: none
+  padding-bottom: 0
+
+div.landing
+  font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, 'FreeSans', Arial, sans-serif
+  width: 920px
+  height: 460px
+  background: white
+  position: relative
+  /* Quote */
+  span.quote
+    display: block
+  h1.quote
+    display: inline-block
+    margin: 0
+    margin-left: 118px
+    margin-top: 64px
+    padding: 30px 40px
+    font-weight: 300
+    width: 700px
+    font-size: 48px
+    border-left: 10px solid #c0392b
+    max-height: 174px
+    overflow: hidden
+    outline: none
+  span.ll
+    font-family: 'Georgia', 'Times New Roman', serif
+    display: inline
+    position: absolute
+    top: 80px
+    left: 35px
+    height: 10px
+    font-size: 128px
+  h2.cite
+    font-weight: 400
+    position: relative
+    left: 117px
+    margin-top: 24px
+    width: 740px
+    outline: none
+  h2.cite:before
+    position: relative
+    content: "\2013"
+    margin-right: 18px
+  /* WAGG things */
+  div.cred
+    background: #c0392b
+    width: 100%
+    height: 56px
+    position: absolute
+    color: white
+    bottom: 0
+    h1
+      font-weight: 300
+      margin: 0
+      font-size: 24px
+      margin-top: 14px
+    h1.nom
+      float: left
+      position: relative
+      left: 36px
+      font-weight: 700
+    h1.at
+      float: right
+      position: relative
+      right: 36px
+      letter-spacing: 1px
+    h1.span
+      outline: none
+  div.tit
+    background: #c0392b
+    width: 100%
+    height: 28px
+    position: absolute
+    color: white
+    top: 0
+    h1.le
+      font-weight: 500
+      margin: 0
+      font-size: 12px
+      margin-top: 7px
+      margin-left: 36px
+      float: left
+    h1.credit
+      font-weight: 300
+      margin: 0
+      font-size: 12px
+      margin-top: 7px
+      margin-right: 36px
+      float: right
+    h1.span
+      outline: none
+  /* Stocks */
+  span.stocks
+    display: block
+    padding-top: 82px
+    div.stock
+      width: 90%
+      margin: 0 auto
+      font-size: 42px
+      padding: 12px
+      span.ticker
+        display: inline-block
+        width: 250px
+        text-align: right
+        outline: 0
+      i.fa
+        display: inline-block
+        padding: 0 20px
+      span.three
+        .percentage
+          display: inline-block
+          background: #2bc04b
+          color: white
+          width: 188px
+          text-align: center
+        .percentage:after
+          content: "%"
+      span.three > span
+        padding: 10px
+        outline: 0
+
+div.bottom
+  margin: 25px
+  font-family: 'Helvetica Neue', Helvetica, 'FreeSans', Arial, sans-serif
+  font-size: 14px
+  div.info
+    width: 400px
+    background: #ffc832
+    padding: 5px 5px
+    border-radius: 5px
+    float: left
+    p
+      margin: 10px
+      line-height: 1.5
+  div.configs
+    width: 400px
+    margin: 10px
+    float: right
+    p
+      margin: 0
+      margin-bottom: 15px
