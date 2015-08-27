@@ -122,13 +122,12 @@ div.landing {
       outline: none; }
   div.landing span.stocks {
     display: block; }
-    div.landing span.stocks div.stock:nth-of-type(1) {
-      padding-top: 82px; }
     div.landing span.stocks div.stock {
+      position: relative;
+      top: 92px;
       width: 90%;
-      margin: 0 auto;
-      font-size: 42px;
-      padding: 12px; }
+      margin: 12px auto;
+      font-size: 42px; }
       div.landing span.stocks div.stock span.ticker {
         display: inline-block;
         width: 250px;
