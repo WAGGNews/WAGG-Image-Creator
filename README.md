@@ -1,5 +1,5 @@
 # WAGG Image Creator
 
-Make quote + stock PNGs for @WAGGNews from your browser.
+A tool to assist members of the WAGG News team in creating PNGs of quotes and stock prices.
 
 Works perfectly in Chrome on Mac, but Safari messes up the anti-aliasing.
