@@ -2,4 +2,4 @@
 
 Make quote + stock PNGs for @WAGGNews from your browser.
 
-Works perfectly in Safari and Chrome.
+Works perfectly in Chrome on Mac, but Safari messes up the anti-aliasing.
