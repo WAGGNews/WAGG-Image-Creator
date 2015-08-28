@@ -173,7 +173,7 @@ div.bottom {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   div.stock {
     position: relative;
-    top: 95px !important; }
+    top: 88px !important; }
 
   .tit .le {
     margin-top: 2px; }
