@@ -51,6 +51,12 @@ div.landing
     max-height: 174px
     overflow: hidden
     outline: none
+  /* Highlighting magic */
+  h1.quote > b, h1.quote > i > b
+    font-weight: 300
+    background: #ffc832
+    color: black
+    padding: 0 5px
   span.ll
     font-family: 'Roboto', sans-serif
     display: inline
@@ -123,7 +129,7 @@ div.landing
     display: block
     div.stock
       position: relative
-      top: 92px
+      top: 96px
       width: 90%
       margin: 12px auto
       font-size: 42px
@@ -147,6 +153,53 @@ div.landing
       span.three > span
         padding: 10px
         outline: 0
+  /* ICYMI */
+  span.icymi
+    display: block
+    width: 100%
+    background: #c0392b
+    height: 376px
+    position: relative
+    top: 28px
+    overflow: hidden
+    margin: 0 auto
+    div.first, div.second
+      width: 460px
+      outline: none
+    div.first
+      float: left
+    div.second
+      float: right
+    h3
+      height: calc(376px / 3 - 35px)
+      outline: none
+      overflow: hidden
+      line-height: 1.5
+      margin-top: 0
+      font-size: 21px
+      margin-bottom: 0px
+      padding: 17.5px 35px
+      background: #c0392b
+      color: white
+      font-weight: 300
+      letter-spacing: 0.5px
+    h3 > b, h3 > i > b
+      font-weight: 300
+      background: #ffc832
+      color: black
+      padding: 0 5px
+    div.first > h3:nth-child(2n+1)
+      background: darken(#c0392b, 10%)
+    div.second > h3:nth-child(2n)
+      background: darken(#c0392b, 10%)
+    div.secondhides > h3
+      display: none
+    div.firstsingle > h3
+      display: block
+      width: 850px !important
+      font-size: 175%
+    div.firstdouble > h3
+      font-size: 100% !important
 
 div.bottom
   margin: 25px
@@ -174,7 +227,7 @@ div.bottom
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
   div.stock
     position: relative
-    top: 88px !important
+    top: 92px !important
   .tit .le
     margin-top: 2px
   h1.quote

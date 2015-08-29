@@ -4,7 +4,7 @@ body {
   margin: 0 auto; }
 
 div.header {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100%;
   height: 28px;
   margin: 32px 0; }
@@ -31,14 +31,16 @@ div.content:last-of-type {
   padding-bottom: 0; }
 
 div.landing {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 920px;
   height: 460px;
   background: white;
   position: relative;
   /* Quote */
+  /* Highlighting magic */
   /* WAGG things */
-  /* Stocks */ }
+  /* Stocks */
+  /* ICYMI */ }
   div.landing span.quote {
     display: block; }
   div.landing h1.quote {
@@ -54,8 +56,13 @@ div.landing {
     max-height: 174px;
     overflow: hidden;
     outline: none; }
+  div.landing h1.quote > b, div.landing h1.quote > i > b {
+    font-weight: 300;
+    background: #ffc832;
+    color: black;
+    padding: 0 5px; }
   div.landing span.ll {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     display: inline;
     position: absolute;
     top: 86px;
@@ -124,7 +131,7 @@ div.landing {
     display: block; }
     div.landing span.stocks div.stock {
       position: relative;
-      top: 92px;
+      top: 96px;
       width: 90%;
       margin: 12px auto;
       font-size: 42px; }
@@ -147,10 +154,56 @@ div.landing {
       div.landing span.stocks div.stock span.three > span {
         padding: 10px;
         outline: 0; }
+  div.landing span.icymi {
+    display: block;
+    width: 100%;
+    background: #c0392b;
+    height: 376px;
+    position: relative;
+    top: 28px;
+    overflow: hidden;
+    margin: 0 auto; }
+    div.landing span.icymi div.first, div.landing span.icymi div.second {
+      width: 460px;
+      outline: none; }
+    div.landing span.icymi div.first {
+      float: left; }
+    div.landing span.icymi div.second {
+      float: right; }
+    div.landing span.icymi h3 {
+      height: calc(376px / 3 - 35px);
+      outline: none;
+      overflow: hidden;
+      line-height: 1.5;
+      margin-top: 0;
+      font-size: 21px;
+      margin-bottom: 0px;
+      padding: 17.5px 35px;
+      background: #c0392b;
+      color: white;
+      font-weight: 300;
+      letter-spacing: 0.5px; }
+    div.landing span.icymi h3 > b, div.landing span.icymi h3 > i > b {
+      font-weight: 300;
+      background: #ffc832;
+      color: black;
+      padding: 0 5px; }
+    div.landing span.icymi div.first > h3:nth-child(2n+1) {
+      background: #962d22; }
+    div.landing span.icymi div.second > h3:nth-child(2n) {
+      background: #962d22; }
+    div.landing span.icymi div.secondhides > h3 {
+      display: none; }
+    div.landing span.icymi div.firstsingle > h3 {
+      display: block;
+      width: 850px !important;
+      font-size: 175%; }
+    div.landing span.icymi div.firstdouble > h3 {
+      font-size: 100% !important; }
 
 div.bottom {
   margin: 25px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px; }
   div.bottom div.info {
     width: 400px;
@@ -173,7 +226,7 @@ div.bottom {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   div.stock {
     position: relative;
-    top: 88px !important; }
+    top: 92px !important; }
 
   .tit .le {
     margin-top: 2px; }

@@ -31,4 +31,19 @@ $(function() {
           }
       });
   });
+
+  // ICYMI
+  $("#saveICYMI").click(function() {
+      html2canvas($("#i"), {
+          onrendered: function(canvas) {
+              theCanvas = canvas;
+              document.body.appendChild(canvas);
+
+              // Convert and download as image
+              Canvas2Image.saveAsPNG(canvas);
+              $("#iout").append(canvas);
+              document.body.removeChild(canvas);
+          }
+      });
+  });
 });
