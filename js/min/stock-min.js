@@ -1,0 +1,1 @@
+$(document).ready(function(){$.getJSON("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22^NDX%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=",function(e){var t="",a=1;$.each(query.results.quote,function(e,o){1==a&&(t+=o.LastTradePriceOnly["#text"]),a++}),$("#ndxprice").append(t)})});

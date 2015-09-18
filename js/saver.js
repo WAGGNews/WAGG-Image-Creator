@@ -32,6 +32,21 @@ $(function() {
       });
   });
 
+  // Stocks 2
+  $("#saveStocks2").click(function() {
+      html2canvas($("#s2"), {
+          onrendered: function(canvas) {
+              theCanvas = canvas;
+              document.body.appendChild(canvas);
+
+              // Convert and download as image
+              Canvas2Image.saveAsPNG(canvas);
+              $("#sout2").append(canvas);
+              document.body.removeChild(canvas);
+          }
+      });
+  });
+
   // ICYMI
   $("#saveICYMI").click(function() {
       html2canvas($("#i"), {

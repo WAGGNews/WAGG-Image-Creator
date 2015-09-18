@@ -6,17 +6,23 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,500,400,700' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script src="../WAGG-Image-Creator/js/html2canvas.js" type="text/javascript"></script>
-    <script src="../WAGG-Image-Creator/js/canvas2image.js" type="text/javascript"></script>
-    <script src="../WAGG-Image-Creator/js/base64.js" type="text/javascript"></script>
-    <script src="../WAGG-Image-Creator/js/saver.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="../WAGG-Image-Creator/css/style.css" type="text/css">
-    <script src="../WAGG-Image-Creator/bower_components/moment-timezone/moment-timezone.js" type="text/javascript"></script>
-    <script src="../WAGG-Image-Creator/bower_components/moment/moment.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="../WAGG-Image-Creator/bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
+    <script src="../js/html2canvas.js" type="text/javascript"></script>
+    <script src="../js/canvas2image.js" type="text/javascript"></script>
+    <script src="../js/base64.js" type="text/javascript"></script>
+    <script src="../js/saver.js" type="text/javascript"></script>
+    <!-- This is so painful. -->
+    <script src="../js/stock.js" type="text/javascript"></script>
+    <script src="../js/stock0.js" type="text/javascript"></script>
+    <script src="../js/stock00.js" type="text/javascript"></script>
+    <script src="../js/stock000.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <script src="../bower_components/moment-timezone/moment-timezone.js" type="text/javascript"></script>
+    <script src="../bower_components/moment/moment.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" type="text/css">
     <script type="text/javascript">
       $(function() {
-        // Messy code allows you to toggle the up+down arrows on the stocks image
+
         $("#arr").on( "click", function() {
           if ($( this ).hasClass( "fa-arrow-circle-up" )) {
             $( this ).removeClass( "fa-arrow-circle-up" ).addClass( "fa-arrow-circle-down" );
@@ -27,17 +33,7 @@
           }
         });
 
-        $("#arr2").on( "click", function() {
-          if ($( this ).hasClass( "fa-arrow-circle-up" )) {
-            $( this ).removeClass( "fa-arrow-circle-up" ).addClass( "fa-arrow-circle-down" );
-            $( this ).next().children( "span.percentage" ).css( 'background', '#c0392b' );
-          } else {
-            $( this ).removeClass( "fa-arrow-circle-down" ).addClass( "fa-arrow-circle-up" );
-            $( this ).next().children( "span.percentage" ).css( 'background', '#2bc04b' );
-          }
-        });
-
-        $("#arr3").on( "click", function() {
+        $("#arr4").on( "click", function() {
           if ($( this ).hasClass( "fa-arrow-circle-up" )) {
             $( this ).removeClass( "fa-arrow-circle-up" ).addClass( "fa-arrow-circle-down" );
             $( this ).next().children( "span.percentage" ).css( 'background', '#c0392b' );
@@ -112,8 +108,8 @@
               <span class="ticker" contentEditable="true">DOW JONES</span>
               <i class="fa fa-arrow-circle-up" id="arr"></i>
               <span class="three">
-                <span class="percentage" contentEditable="true">3.95</span>
-                <span class="price" contentEditable="true">16,285.51</span>
+                <span class="percentage" contentEditable="true">X.XX</span>
+                <span class="price" contentEditable="true">XX,XXX.XX</span>
               </span>
             </div>
 
@@ -121,8 +117,8 @@
               <span class="ticker" contentEditable="true">S&P 500</span>
               <i class="fa fa-arrow-circle-up" id="arr2"></i>
               <span class="three">
-                <span class="percentage" contentEditable="true">3.90</span>
-                <span class="price" contentEditable="true">1,940.51</span>
+                <span class="percentage" contentEditable="true" id="sppercent"></span>
+                <span class="price" contentEditable="true" id="spprice"></span>
               </span>
             </div>
 
@@ -131,15 +127,15 @@
               <span class="ticker" contentEditable="true">NASDAQ</span>
               <i class="fa fa-arrow-circle-up" id="arr3"></i>
               <span class="three">
-                <span class="percentage" contentEditable="true">4.24</span>
-                <span class="price" contentEditable="true">4,697.54</span>
+                <span class="percentage" contentEditable="true" id="ndxpercent"></span>
+                <span class="price" contentEditable="true" id="ndxprice"></span>
               </span>
             </div>
 
           </span>
 
           <div class="tit">
-            <h1 class="le" contentEditable="true">[Region] markets at close</h1>
+            <h1 class="le" contentEditable="true">U.S. markets at close</h1>
             <h1 class="credit">Source: <span contentEditable="true">Yahoo! Finance</span></h1>
           </div>
 
@@ -152,13 +148,73 @@
       <div class="bottom">
         <div class="info">
           <p>This works best with the latest versions of Google Chrome. Other modern browsers should be fine. Safari should not be used due to anti-aliasing issues.</p>
-          <p>Make sure all stock prices are correct and that they're sourced correctly, or Braeden will get mad.</p>
+          <p>Make sure all stock prices are correct and that they're sourced correctly, and to change the region in the top-left, or Braeden will get mad.</p>
         </div>
         <div class="configs">
           <p><em>Click on the arrow to toggle its direction, and replace prices, percentages, etc.</em></p>
           <p><strong><em>Remember to change the source and to change the top-left text to match the region where the markets have closed!</em></strong></p>
           <input type="button" id="saveStocks" value="Save as an image"/>
           <div id="#sout"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content stocks" id="stocks">
+      <div class="top">
+        <div class="landing" id="s2">
+          <span class="stocks">
+
+            <div class="stock">
+              <span class="ticker" contentEditable="true">SHANGHAI</span>
+              <i class="fa fa-arrow-circle-up" id="arr4"></i>
+              <span class="three">
+                <span class="percentage" contentEditable="true">X.XX</span>
+                <span class="price" contentEditable="true">XX,XXX.XX</span>
+              </span>
+            </div>
+
+            <div class="stock">
+              <span class="ticker" contentEditable="true">NIKKEI</span>
+              <i class="fa fa-arrow-circle-up" id="arr5"></i>
+              <span class="three">
+                <span class="percentage" contentEditable="true" id="nkpercent"></span>
+                <span class="price" contentEditable="true" id="nkprice"></span>
+              </span>
+            </div>
+
+
+            <div class="stock">
+              <span class="ticker" contentEditable="true">HANG SENG</span>
+              <i class="fa fa-arrow-circle-up" id="arr6"></i>
+              <span class="three">
+                <span class="percentage" contentEditable="true" id="hspercent"></span>
+                <span class="price" contentEditable="true" id="hsprice"></span>
+              </span>
+            </div>
+
+          </span>
+
+          <div class="tit">
+            <h1 class="le" contentEditable="true">Asian markets at close</h1>
+            <h1 class="credit">Source: <span contentEditable="true">Yahoo! Finance</span></h1>
+          </div>
+
+          <div class="cred">
+            <h1 class="nom">World Aggregate News</h1>
+            <h1 class="at">@WAGGNews</h1>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="info">
+          <p>This works best with the latest versions of Google Chrome. Other modern browsers should be fine. Safari should not be used due to anti-aliasing issues.</p>
+          <p>Make sure all stock prices are correct and that they're sourced correctly, and to change the region in the top-left, or Braeden will get mad.</p>
+        </div>
+        <div class="configs">
+          <p><em>Click on the arrow to toggle its direction, and replace prices, percentages, etc.</em></p>
+          <p><strong><em>Remember to change the source and to change the top-left text to match the region where the markets have closed!</em></strong></p>
+          <input type="button" id="saveStocks2" value="Save as an image"/>
+          <div id="#sout2"></div>
         </div>
       </div>
     </div>
